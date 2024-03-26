@@ -28,11 +28,14 @@ jobs:
         run: |
           npm test
 
-  deploy-pages:
-    name: 🚀 Deploy Pages
+  deploy:
+    name: 🚀 Deploy
     if: github.event_name == 'push'
     runs-on: ubuntu-latest
     needs: run-tests
+    permissions:
+      pages: write
+      id-token: write
     steps:
       - name: 🐙 Check out repository
         uses: actions/checkout@v4
