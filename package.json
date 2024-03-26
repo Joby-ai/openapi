@@ -1,13 +1,23 @@
 {
-  "name": "acme-api",
-  "version": "1.0.0",
-  "dependencies": {
-    "@redocly/cli": "1.10.5"
+  "name": "joby-ai-openapi",
+  "version": "0.1.0",
+  "description": "Joby.ai OpenAPI definitions",
+  "repository": {
+    "type": "git",
+    "url": "github:Joby-ai/openapi"
   },
-  "private": true,
+  "author": {
+    "name": "Kirill T.",
+    "email": "contact@shvix.dev",
+    "url": "https://shvix.dev"
+  },
+  "license": "MIT",
   "scripts": {
     "start": "redocly preview-docs",
     "build": "redocly bundle -o dist/bundle.yaml",
     "test": "redocly lint"
+  },
+  "dependencies": {
+    "@redocly/cli": "^1.10.6"
   }
 }

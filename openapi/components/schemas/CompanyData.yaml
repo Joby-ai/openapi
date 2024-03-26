@@ -1,0 +1,50 @@
+title: Company Data
+description: >
+  Information about a company.
+type: object
+properties:
+  description_summary:
+    type: string
+    description: >
+      Summary of the company's description.
+  linkedin_link:
+    type: string
+    description: >
+      Link to the company's LinkedIn page.
+    format: uri
+  size_range:
+    type: object
+    description: >
+      Size range of the company.
+    properties:
+      min:
+        type: integer
+        description: The minimum size of the company.
+        examples:
+          - 1001
+          - 1
+      max:
+        type: integer
+        description: The maximum size of the company.
+        examples:
+          - 5000
+          - 50
+  industries:
+    type: array
+    description: >
+      Industries the company operates in.
+    items:
+      type: string
+      examples:
+        - Finance
+        - Engineering
+        - Real Estate
+  subindustries:
+    type: array
+    description: >
+      The sub-industries of the company.
+    items:
+      type: string
+      examples:
+        - Insurance
+        - Banking

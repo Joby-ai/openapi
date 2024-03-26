@@ -1,0 +1,190 @@
+title: Job
+type: object
+properties:
+  _id:
+    type: string
+    description: |
+      Unique identifier of the job.
+    examples:
+      - 65314d5c61fa344dd181d36b
+      - 65314d5c61fa344dd181d36c
+  company_name:
+    type: string
+    description: |
+      Name of the company.
+    examples:
+      - The Boring Company
+      - Google
+      - Microsoft
+  job_title:
+    type: string
+    description: |
+      Title of the job.
+    examples:
+      - Electrical Engineer
+      - Staff Software Engineer
+      - Visual Designer
+      - Senior Project Manager - Life Sciences, Research & Laboratory Projects
+  country:
+    type: array
+    description: |
+      Countries where the job is located. Can also contain regions like EMEA, Africa, etc.
+    items:
+      type: string
+      examples:
+        - United States
+        - Canada
+        - EMEA
+        - Africa
+  city:
+    type: string
+    description: |
+      City where the job is located.
+    examples:
+      - New York
+      - Frankfurt
+      - Remote (USA)
+      - Santa Clara, CA
+  us_state:
+    type:
+      - array
+      - "null"
+    description: |
+      U.S. states where the job is located. 
+    items:
+      type: string
+      examples:
+        - New York
+        - Tennessee
+        - Texas
+  job_category:
+    type: array
+    description: |
+      Categories of the job.
+    items:
+      type: string
+      examples:
+        - Legal Jobs
+        - Solutions Engineer Jobs
+        - Other
+  job_type:
+    type: array
+    description: |
+      Employment types of the job.
+    items:
+      type: string
+      examples:
+        - Full Time
+        - Part Time
+        - Internship
+        - Contract
+  location_type:
+    type: array
+    description: |
+      Type of location.
+    items:
+      type: string
+      enum:
+        - Remote
+        - In-Person
+        - Hybrid
+  description:
+    type: string
+    description: |
+      Description of the job with HTML tags for rich text formatting.
+  salary:
+    type:
+      - object
+      - "null"
+    description: |
+      Salary details of the job.
+    properties:
+      value:
+        type: number
+        description: |
+          Amount of the salary.
+        examples:
+          - 100000
+      period:
+        type: string
+        description: |
+          Period of the salary.
+        examples:
+          - year
+      currency:
+        type: string
+        description: |
+          Currency of the salary.
+        examples:
+          - USD
+  visa_sponsored:
+    type: boolean
+    description: |
+      Whether the job sponsors visa.
+  requirements_summary:
+    type: string
+    description: |
+      Summary of the job requirements.
+  yoe_range:
+    type:
+      - object
+      - "null"
+    description: |
+      Years of experience range.
+    properties:
+      min:
+        type: integer
+        description: |
+          Minimum years of required experience.
+        examples:
+          - 1
+          - 5
+      max:
+        type: integer
+        description: |
+          Maximum years of required experience.
+        examples:
+          - 3
+          - 10
+  job_board:
+    type: string
+    description: |
+      Job board where the job was posted.
+    examples:
+      - Greenhouse
+      - Lever
+  job_board_link:
+    type: string
+    description: |
+      Link to the board where the job was posted.
+    format: uri
+  application_link:
+    type: string
+    description: |
+      Link to the job application.
+    format: uri
+  company_link:
+    type: string
+    description: |
+      Link to the company's website.
+    format: uri
+  company_logo:
+    type: string
+    description: |
+      Link to the company's logo image.
+    format: uri
+  company_data:
+    $ref: ./CompanyData.yaml
+  date_posted:
+    type: string
+    format: date
+    description: |
+      The date when the job was posted.
+    examples:
+      - 2023-10-18
+  openai_embedding:
+    type: array
+    description: |
+      The OpenAI embedding of the company.
+    items:
+      type: number

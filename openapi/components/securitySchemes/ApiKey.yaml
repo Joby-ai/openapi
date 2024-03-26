@@ -1,0 +1,4 @@
+type: apiKey
+in: header
+name: apiKey
+description: A server or user API key.

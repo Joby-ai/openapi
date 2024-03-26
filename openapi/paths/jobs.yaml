@@ -1,0 +1,160 @@
+get:
+  summary: Search jobs
+  description: |
+    Search for jobs by keywords, locations, and other parameters.
+  operationId: getJobs
+  parameters:
+    - name: and
+      in: query
+      description: |
+        Words or phrases, all of which must appear in the job description or title.
+      schema:
+        type: array
+        items:
+          type: string
+      example:
+        - ai
+        - computer vision
+    - name: or
+      in: query
+      description: |
+        Words or phrases, at least one of which must appear in the job description or title.
+      schema:
+        type: array
+        items:
+          type: string
+      example:
+        - python
+        - java
+    - name: exclude
+      in: query
+      description: |
+        Words or phrases, none of which must appear in the job description or title.
+      schema:
+        type: array
+        items:
+          type: string
+      example:
+        - senior
+        - manager
+    - name: title
+      in: query
+      description: |
+        Words or phrases, at least one of which must appear in the job title.
+      schema:
+        type:
+          - array
+        items:
+          type: string
+      example:
+        - engineer
+        - developer
+    - name: company
+      in: query
+      description: |
+        Words or phrases, at least one of which must appear in the company name.
+      schema:
+        type:
+          - array
+        items:
+          type: string
+      example:
+        - google
+        - facebook
+    - name: location
+      in: query
+      description: |
+        Words or phrases, at least one of which must appear in the job location.
+      schema:
+        type:
+          - array
+        items:
+          type: string
+      example:
+        - germany
+        - remote
+    - name: yearsFrom
+      in: query
+      description: |
+        Minimum number of years of experience required.
+      schema:
+        type: integer
+        minimum: 0
+      example: 3
+    - name: yearsTo
+      in: query
+      description: |
+        Maximum number of years of experience required.
+      schema:
+        type: integer
+        minimum: 0
+      example: 5
+    - name: salaryFrom
+      in: query
+      description: |
+        Minimum salary.
+      schema:
+        type: number
+        minimum: 0
+      example: 80000
+    - name: salaryTo
+      in: query
+      description: |
+        Maximum salary.
+      schema:
+        type: number
+        minimum: 0
+      example: 120000
+    - name: salaryCurrency
+      in: query
+      description: |
+        Currency of the salary.
+      schema:
+        type: string
+      example: USD
+    - name: salaryPeriod
+      in: query
+      description: |
+        Period of the salary.
+      schema:
+        type: string
+      example: year
+    - name: visa
+      in: query
+      description: |
+        Whether the job sponsors visa.
+      schema:
+        type: boolean
+      example: yes
+    - name: days
+      in: query
+      description: |
+        Maximum number of days since the job was posted.
+      schema:
+        type: integer
+        minimum: 1
+      example: 7
+    - name: limit
+      in: query
+      description: |
+        Number of jobs to return.
+      schema:
+        type: integer
+        minimum: 1
+        maximum: 100
+        default: 10
+    - name: offset
+      in: query
+      description: |
+        Number of jobs to skip.
+      schema:
+        type: integer
+        minimum: 0
+        default: 0
+  responses:
+    200:
+      $ref: ../components/responses/Jobs.yaml
+    400:
+      description: Bad request
+    401:
+      description: Unauthorized

@@ -1,0 +1,8 @@
+description: |
+  A list of matching jobs.
+content:
+  application/json:
+    schema:
+      type: array
+      items:
+        $ref: ../schemas/Job.yaml

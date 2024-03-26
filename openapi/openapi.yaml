@@ -1,80 +1,31 @@
 openapi: 3.1.0
 info:
-  version: 1.0.0
-  title: Example API
-  termsOfService: https://example.com/terms/
+  version: 0.1.0
+  title: Joby.ai API Reference
+  termsOfService: https://blog.joby.ai/terms
   contact:
-    email: contact@example.com
-    url: http://example.com/contact
+    email: hello@joby.ai
+    url: https://www.joby.ai
   license:
-    name: Apache 2.0
-    url: http://www.apache.org/licenses/LICENSE-2.0.html
+    name: MIT
+    url: https://opensource.org/licenses/MIT
   x-logo:
     url: https://redocly.github.io/openapi-template/logo.png
-  description: >
-    This is an **example** API to demonstrate features of the OpenAPI
-    specification.
+  summary: An API for searching jobs in the Joby.ai database.
+  description: |
+    Joby’s goal is to be the best job search engine on the planet, it scrapes the entire internet for every job on the internet and aggregates it in one place for the convenience of the job seeker.
 
-    # Introduction
-
-    This API definition is intended to to be a good starting point for
-    describing your API in [OpenAPI/Swagger
-    format](https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.0.2.md).
-
-    It also demonstrates features of the
-    [create-openapi-repo](https://github.com/Redocly/create-openapi-repo) tool
-    and the [Redoc](https://github.com/Redocly/Redoc) documentation engine. Beyond
-    the standard OpenAPI syntax, we use a few 
-    [vendor extensions](https://github.com/Redocly/Redoc/blob/main/docs/redoc-vendor-extensions.md).
-
-    # OpenAPI Specification
-
-    The goal of The OpenAPI Specification is to define a standard, language-agnostic interface to REST APIs which
-    allows both humans and computers to discover and understand the capabilities
-    of the service without access to source
-    code, documentation, or through network traffic inspection. When properly
-    defined via OpenAPI, a consumer can 
-    understand and interact with the remote service with a minimal amount of
-    implementation logic. Similar to what
-    interfaces have done for lower-level programming, OpenAPI removes the
-    guesswork in calling the service.
-tags:
-  - name: Echo
-    description: Example echo operations.
-  - name: User
-    description: Operations about users.
-  - name: Tag
-    description: This is a tag description.
+    If you are interested in our API, please fill out [this short questionnaire](https://docs.google.com/forms/d/e/1FAIpQLScKJk7VrPv0TVPlOocXvpfxr1GIxifORhSWmj3jeTdqT6RbQQ/viewform) or contact us at [hello@joby.ai](mailto:hello@joby.ai) and we'll be in touch.
 servers:
-  - url: https://{tenant}/api/v1
-    variables:
-      tenant:
-        default: www
-        description: Your tenant id
-  - url: https://example.com/api/v1
+  - url: https://www.joby.ai/api/v0
+security:
+  - ApiKey: []
 paths:
-  /users/{username}:
-    $ref: paths/users_{username}.yaml
-  /echo:
-    $ref: paths/echo.yaml
-  /pathItem:
-    $ref: paths/pathItem.yaml
-  /pathItemWithExamples:
-    $ref: paths/pathItemWithExamples.yaml
+  /jobs:
+    $ref: paths/jobs.yaml
 components:
   securitySchemes:
-    main_auth:
-      type: oauth2
-      flows:
-        implicit:
-          authorizationUrl: http://example.com/api/oauth/dialog
-          scopes:
-            read:users: read users info
-            write:users: modify or remove users
-    api_key:
+    ApiKey:
       type: apiKey
+      name: x-api-key
       in: header
-      name: api_key
-    basic_auth:
-      type: http
-      scheme: basic
