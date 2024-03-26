@@ -35,16 +35,14 @@ properties:
       Industries the company operates in.
     items:
       type: string
-      examples:
-        - Finance
-        - Engineering
-        - Real Estate
+    examples:
+      - [Finance, Real Estate]
+      - [Engineering]
   subindustries:
     type: array
     description: >
       The sub-industries of the company.
     items:
       type: string
-      examples:
-        - Insurance
-        - Banking
+    examples:
+      - [Insurance, Banking]

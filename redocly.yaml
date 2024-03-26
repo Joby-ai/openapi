@@ -11,3 +11,13 @@ rules:
 theme:
   openapi:
     htmlTemplate: ./docs/index.html
+    disableSearch: true
+    jsonSampleExpandLevel: all
+    theme:
+      colors:
+        primary:
+          main: '#f4b448'
+      typography:
+        fontSize: 16px
+        headings:
+          fontWeight: bold

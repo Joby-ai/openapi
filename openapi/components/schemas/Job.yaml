@@ -13,17 +13,14 @@ properties:
     description: |
       Name of the company.
     examples:
-      - The Boring Company
-      - Google
-      - Microsoft
+      - Insurance Company
   job_title:
     type: string
     description: |
       Title of the job.
     examples:
-      - Electrical Engineer
+      - Finance Manager
       - Staff Software Engineer
-      - Visual Designer
       - Senior Project Manager - Life Sciences, Research & Laboratory Projects
   country:
     type: array
@@ -53,31 +50,24 @@ properties:
       U.S. states where the job is located. 
     items:
       type: string
-      examples:
-        - New York
-        - Tennessee
-        - Texas
+    examples:
+      - [New York, Texas]
   job_category:
     type: array
     description: |
       Categories of the job.
     items:
       type: string
-      examples:
-        - Legal Jobs
-        - Solutions Engineer Jobs
-        - Other
+    examples:
+      - [Legal Jobs, Finance]
   job_type:
     type: array
     description: |
       Employment types of the job.
     items:
       type: string
-      examples:
-        - Full Time
-        - Part Time
-        - Internship
-        - Contract
+    examples:
+      - [Full Time, Contract]
   location_type:
     type: array
     description: |
@@ -92,6 +82,8 @@ properties:
     type: string
     description: |
       Description of the job with HTML tags for rich text formatting.
+    examples:
+      - '<div>\n<p>Job description</p>\n</div>'
   salary:
     type:
       - object
@@ -137,15 +129,15 @@ properties:
         description: |
           Minimum years of required experience.
         examples:
-          - 1
           - 5
+          - 1
       max:
         type: integer
         description: |
           Maximum years of required experience.
         examples:
+          - 8
           - 3
-          - 10
   job_board:
     type: string
     description: |
@@ -188,3 +180,5 @@ properties:
       The OpenAI embedding of the company.
     items:
       type: number
+    examples:
+      - [-0.010098631493747234, 0.012884697876870632, 0.07594610750675201]

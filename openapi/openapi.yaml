@@ -1,7 +1,7 @@
 openapi: 3.1.0
 info:
-  version: 0.1.0
-  title: Joby.ai API Reference
+  version: v1
+  title: 📄 API Reference
   termsOfService: https://blog.joby.ai/terms
   contact:
     email: hello@joby.ai
@@ -10,10 +10,16 @@ info:
     name: MIT
     url: https://opensource.org/licenses/MIT
   x-logo:
-    url: https://redocly.github.io/openapi-template/logo.png
-  summary: An API for searching jobs in the Joby.ai database.
+    url: static/logo.svg
+  summary: An API for searching jobs in the Joby's database.
   description: |
+    # 💡 About
+
     Joby’s goal is to be the best job search engine on the planet, it scrapes the entire internet for every job on the internet and aggregates it in one place for the convenience of the job seeker.
+
+    Build your product or tool with our data of the most up to date jobs/companies hiring on the internet.
+
+    # 💌 Contact us
 
     If you are interested in our API, please fill out [this short questionnaire](https://docs.google.com/forms/d/e/1FAIpQLScKJk7VrPv0TVPlOocXvpfxr1GIxifORhSWmj3jeTdqT6RbQQ/viewform) or contact us at [hello@joby.ai](mailto:hello@joby.ai) and we'll be in touch.
 servers:

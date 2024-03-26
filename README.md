@@ -1,4 +1,4 @@
-# Joby.ai OpenAPI definitions
+# Joby's OpenAPI definitions
 
 ## Working on definitions
 

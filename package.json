@@ -14,7 +14,8 @@
   "license": "MIT",
   "scripts": {
     "start": "redocly preview-docs",
-    "build": "redocly build-docs -o dist/index.html",
+    "build": "redocly build-docs -o dist/index.html && cp -r docs/static dist",
+    "bundle": "redocly bundle -o dist/openapi.yaml",
     "test": "redocly lint"
   },
   "dependencies": {

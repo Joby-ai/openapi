@@ -1,7 +1,7 @@
 get:
   summary: Search jobs
   description: |
-    Search for jobs by keywords, locations, and other parameters.
+    Search for jobs by keywords, location, and other parameters.
   operationId: getJobs
   parameters:
     - name: and
