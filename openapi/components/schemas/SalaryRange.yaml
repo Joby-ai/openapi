@@ -1,0 +1,25 @@
+title: Salary Range
+description: |
+  Salary range details.
+type: object
+properties:
+  min:
+    type: number
+    description: |
+      Minimum salary amount.
+    example: 100000
+  max:
+    type: number
+    description: |
+      Maximum salary amount.
+    example: 200000
+  period:
+    type: string
+    description: |
+      Salary period.
+    example: year
+  currency:
+    type: string
+    description: |
+      Salary currency.
+    example: USD

@@ -1,7 +1,7 @@
-openapi: 3.1.0
+openapi: "3.0"
 info:
-  version: v1
-  title: 📄 API Reference
+  version: beta
+  title: 📄 Search API Reference
   termsOfService: https://blog.joby.ai/terms
   contact:
     email: hello@joby.ai
@@ -11,8 +11,9 @@ info:
     url: https://opensource.org/licenses/MIT
   x-logo:
     url: static/logo.svg
-  summary: An API for searching jobs in the Joby's database.
   description: |
+    An API for searching jobs in the Joby's database.
+
     # 💡 About
 
     Joby’s goal is to be the best job search engine on the planet, it scrapes the entire internet for every job on the internet and aggregates it in one place for the convenience of the job seeker.

@@ -20,29 +20,32 @@ properties:
       min:
         type: integer
         description: The minimum size of the company.
-        examples:
-          - 1001
-          - 1
       max:
         type: integer
         description: The maximum size of the company.
-        examples:
-          - 5000
-          - 50
+    example:
+      min: 1001
+      max: 5000
   industries:
     type: array
     description: >
       Industries the company operates in.
     items:
       type: string
-    examples:
-      - [Finance, Real Estate]
-      - [Engineering]
+    example:
+      - Finance
+      - Real Estate
   subindustries:
     type: array
     description: >
       The sub-industries of the company.
     items:
       type: string
-    examples:
-      - [Insurance, Banking]
+    example:
+      - Insurance
+      - Banking
+required:
+  - description_summary
+  - size_range
+  - industries
+  - subindustries

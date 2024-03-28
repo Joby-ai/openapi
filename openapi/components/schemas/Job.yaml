@@ -1,73 +1,66 @@
 title: Job
 type: object
+description: |
+  Job details.
 properties:
   _id:
     type: string
     description: |
       Unique identifier of the job.
-    examples:
-      - 65314d5c61fa344dd181d36b
-      - 65314d5c61fa344dd181d36c
+    example: 65314d5c61fa344dd181d36b
   company_name:
     type: string
     description: |
       Name of the company.
-    examples:
-      - Insurance Company
+    example: Insurance Company
   job_title:
     type: string
     description: |
       Title of the job.
-    examples:
-      - Finance Manager
-      - Staff Software Engineer
-      - Senior Project Manager - Life Sciences, Research & Laboratory Projects
+    example: Finance Manager
   country:
     type: array
     description: |
       Countries where the job is located. Can also contain regions like EMEA, Africa, etc.
     items:
       type: string
-      examples:
-        - United States
-        - Canada
-        - EMEA
-        - Africa
+    example:
+      - United States
+      - Canada
+      - EMEA
+      - Africa
   city:
     type: string
     description: |
       City where the job is located.
-    examples:
-      - New York
-      - Frankfurt
-      - Remote (USA)
-      - Santa Clara, CA
+    example: New York
   us_state:
-    type:
-      - array
-      - "null"
+    type: array
     description: |
-      U.S. states where the job is located. 
+      U.S. states where the job is located.
     items:
       type: string
-    examples:
-      - [New York, Texas]
+    example:
+      - New York
+      - Texas
   job_category:
     type: array
     description: |
       Categories of the job.
     items:
       type: string
-    examples:
-      - [Legal Jobs, Finance]
+    example:
+      - Legal Jobs
+      - Finance
   job_type:
     type: array
     description: |
       Employment types of the job.
     items:
       type: string
-    examples:
-      - [Full Time, Contract]
+    example:
+      - Full Time
+      - Contract
   location_type:
     type: array
     description: |
@@ -78,93 +71,59 @@ properties:
         - Remote
         - In-Person
         - Hybrid
+    example:
+      - In-Person
+      - Hybrid
   description:
     type: string
     description: |
       Description of the job with HTML tags for rich text formatting.
-    examples:
-      - '<div>\n<p>Job description</p>\n</div>'
-  salary:
-    type:
-      - object
-      - "null"
-    description: |
-      Salary details of the job.
-    properties:
-      value:
-        type: number
-        description: |
-          Amount of the salary.
-        examples:
-          - 100000
-      period:
-        type: string
-        description: |
-          Period of the salary.
-        examples:
-          - year
-      currency:
-        type: string
-        description: |
-          Currency of the salary.
-        examples:
-          - USD
+    example: >-
+      '<div>\n<p>Job description</p>\n</div>'
+  salary_range:
+    $ref: ./SalaryRange.yaml
   visa_sponsored:
     type: boolean
     description: |
       Whether the job sponsors visa.
+    example: false
   requirements_summary:
     type: string
     description: |
       Summary of the job requirements.
+    example: >-
+      5+ years of experience in finance.
   yoe_range:
-    type:
-      - object
-      - "null"
-    description: |
-      Years of experience range.
-    properties:
-      min:
-        type: integer
-        description: |
-          Minimum years of required experience.
-        examples:
-          - 5
-          - 1
-      max:
-        type: integer
-        description: |
-          Maximum years of required experience.
-        examples:
-          - 8
-          - 3
+    $ref: ./YearsOfExperienceRange.yaml
   job_board:
     type: string
     description: |
       Job board where the job was posted.
-    examples:
-      - Greenhouse
-      - Lever
+    example: Greenhouse
   job_board_link:
     type: string
     description: |
       Link to the board where the job was posted.
     format: uri
+    example: https://www.greenhouse.io
   application_link:
     type: string
     description: |
       Link to the job application.
     format: uri
+    example: https://www.greenhouse.io/apply
   company_link:
     type: string
     description: |
       Link to the company's website.
     format: uri
+    example: https://www.insurancecompany.com
   company_logo:
     type: string
     description: |
       Link to the company's logo image.
     format: uri
+    example: https://www.insurancecompany.com/logo.png
   company_data:
     $ref: ./CompanyData.yaml
   date_posted:
@@ -172,13 +131,35 @@ properties:
     format: date
     description: |
       The date when the job was posted.
-    examples:
-      - 2023-10-18
+    example: '2023-10-18'
   openai_embedding:
     type: array
     description: |
       The OpenAI embedding of the company.
     items:
       type: number
-    examples:
-      - [-0.010098631493747234, 0.012884697876870632, 0.07594610750675201]
+    example:
+      - -0.010098631493747234
+      - 0.012884697876870632
+      - 0.07594610750675201
+      - 0.045678123235702515
+      - 0.034567890123456789
+      - 0.056789012345678901
+      - 0.067890123456789012
+required:
+  - _id
+  - company_name
+  - job_title
+  - city
+  - job_category
+  - job_type
+  - location_type
+  - description
+  - visa_sponsored
+  - requirements_summary
+  - job_board
+  - job_board_link
+  - application_link
+  - company_data
+  - date_posted
+  - openai_embedding
