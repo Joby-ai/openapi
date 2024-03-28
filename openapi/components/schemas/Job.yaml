@@ -132,20 +132,6 @@ properties:
     description: |
       The date when the job was posted.
     example: '2023-10-18'
-  openai_embedding:
-    type: array
-    description: |
-      The OpenAI embedding of the company.
-    items:
-      type: number
-    example:
-      - -0.010098631493747234
-      - 0.012884697876870632
-      - 0.07594610750675201
-      - 0.045678123235702515
-      - 0.034567890123456789
-      - 0.056789012345678901
-      - 0.067890123456789012
 required:
   - _id
   - company_name
@@ -162,4 +148,3 @@ required:
   - application_link
   - company_data
   - date_posted
-  - openai_embedding
