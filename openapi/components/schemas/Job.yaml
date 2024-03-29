@@ -1,26 +1,26 @@
 title: Job
 type: object
-description: |
+description: |-
   Job details.
 properties:
   _id:
     type: string
-    description: |
+    description: |-
       Unique identifier of the job.
     example: 65314d5c61fa344dd181d36b
   company_name:
     type: string
-    description: |
+    description: |-
       Name of the company.
     example: Insurance Company
   job_title:
     type: string
-    description: |
+    description: |-
       Title of the job.
     example: Finance Manager
   country:
     type: array
-    description: |
+    description: |-
       Countries where the job is located. Can also contain regions like EMEA, Africa, etc.
     items:
       type: string
@@ -31,12 +31,12 @@ properties:
       - Africa
   city:
     type: string
-    description: |
+    description: |-
       City where the job is located.
     example: New York
   us_state:
     type: array
-    description: |
+    description: |-
       U.S. states where the job is located.
     items:
       type: string
@@ -45,7 +45,7 @@ properties:
       - Texas
   job_category:
     type: array
-    description: |
+    description: |-
       Categories of the job.
     items:
       type: string
@@ -54,7 +54,7 @@ properties:
       - Finance
   job_type:
     type: array
-    description: |
+    description: |-
       Employment types of the job.
     items:
       type: string
@@ -63,7 +63,7 @@ properties:
       - Contract
   location_type:
     type: array
-    description: |
+    description: |-
       Type of location.
     items:
       type: string
@@ -76,51 +76,51 @@ properties:
       - Hybrid
   description:
     type: string
-    description: |
+    description: |-
       Description of the job with HTML tags for rich text formatting.
-    example: >-
+    example: |-
       '<div>\n<p>Job description</p>\n</div>'
   salary_range:
     $ref: ./SalaryRange.yaml
   visa_sponsored:
     type: boolean
-    description: |
+    description: |-
       Whether the job sponsors visa.
     example: false
   requirements_summary:
     type: string
-    description: |
+    description: |-
       Summary of the job requirements.
-    example: >-
+    example: |-
       5+ years of experience in finance.
   yoe_range:
     $ref: ./YearsOfExperienceRange.yaml
   job_board:
     type: string
-    description: |
+    description: |-
       Job board where the job was posted.
     example: Greenhouse
   job_board_link:
     type: string
-    description: |
+    description: |-
       Link to the board where the job was posted.
     format: uri
     example: https://www.greenhouse.io
   application_link:
     type: string
-    description: |
+    description: |-
       Link to the job application.
     format: uri
     example: https://www.greenhouse.io/apply
   company_link:
     type: string
-    description: |
+    description: |-
       Link to the company's website.
     format: uri
     example: https://www.insurancecompany.com
   company_logo:
     type: string
-    description: |
+    description: |-
       Link to the company's logo image.
     format: uri
     example: https://www.insurancecompany.com/logo.png
@@ -129,7 +129,7 @@ properties:
   date_posted:
     type: string
     format: date
-    description: |
+    description: |-
       The date when the job was posted.
     example: '2023-10-18'
 required:

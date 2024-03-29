@@ -1,7 +1,7 @@
-openapi: "3.0"
+openapi: '3.0'
 info:
-  version: beta
-  title: 📄 Search API Reference
+  version: v0
+  title: Joby.ai Search API
   termsOfService: https://blog.joby.ai/terms
   contact:
     email: hello@joby.ai
@@ -11,7 +11,7 @@ info:
     url: https://opensource.org/licenses/MIT
   x-logo:
     url: static/logo.svg
-  description: |
+  description: |-
     An API for searching jobs in the Joby's database.
 
     # 💡 About

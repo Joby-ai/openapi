@@ -1,12 +1,12 @@
 get:
   summary: Search jobs
-  description: |
+  description: |-
     Search for jobs by keywords, location, and other parameters.
   operationId: getJobs
   parameters:
     - name: and
       in: query
-      description: |
+      description: |-
         Words or phrases, all of which must appear in the job description or title.
       schema:
         type: array
@@ -17,7 +17,7 @@ get:
         - computer vision
     - name: or
       in: query
-      description: |
+      description: |-
         Words or phrases, at least one of which must appear in the job description or title.
       schema:
         type: array
@@ -28,7 +28,7 @@ get:
         - java
     - name: not
       in: query
-      description: |
+      description: |-
         Words or phrases, none of which must appear in the job description or title.
       schema:
         type: array
@@ -39,7 +39,7 @@ get:
         - manager
     - name: title
       in: query
-      description: |
+      description: |-
         Words or phrases, at least one of which must appear in the job title.
       schema:
         type: array
@@ -50,8 +50,8 @@ get:
         - developer
     - name: company
       in: query
-      description: |
-        Words or phrases, at least one of which must appear in the company name.
+      description: |-
+        Company names that posted the job.
       schema:
         type: array
         items:
@@ -61,7 +61,7 @@ get:
         - facebook
     - name: location
       in: query
-      description: |
+      description: |-
         Words or phrases, at least one of which must appear in the job location.
       schema:
         type: array
@@ -72,60 +72,60 @@ get:
         - remote
     - name: yearsFrom
       in: query
-      description: |
-        Minimum number of years of experience required.
+      description: |-
+        Minimum number of required years of experience to get results for.
       schema:
         type: integer
         minimum: 0
       example: 3
     - name: yearsTo
       in: query
-      description: |
-        Maximum number of years of experience required.
+      description: |-
+        Maximum number of required years of experience to get results for.
       schema:
         type: integer
         minimum: 0
       example: 5
     - name: salaryFrom
       in: query
-      description: |
-        Minimum salary amount.
+      description: |-
+        Minimum salary amount to get results for.
       schema:
         type: number
         minimum: 0
       example: 80000
     - name: salaryTo
       in: query
-      description: |
-        Maximum salary amount.
+      description: |-
+        Maximum salary amount to get results for.
       schema:
         type: number
         minimum: 0
       example: 120000
     - name: salaryCurrency
       in: query
-      description: |
+      description: |-
         Currency of the salary.
       schema:
         type: string
       example: USD
     - name: salaryPeriod
       in: query
-      description: |
+      description: |-
         Salary period.
       schema:
         type: string
       example: year
     - name: visa
       in: query
-      description: |
+      description: |-
         Whether the job sponsors visa.
       schema:
         type: boolean
-      example: yes
+      example: true
     - name: days
       in: query
-      description: |
+      description: |-
         Maximum number of days since the job was posted.
       schema:
         type: integer
@@ -133,7 +133,7 @@ get:
       example: 7
     - name: limit
       in: query
-      description: |
+      description: |-
         Number of jobs to return.
       schema:
         type: integer
@@ -142,7 +142,7 @@ get:
         default: 10
     - name: offset
       in: query
-      description: |
+      description: |-
         Number of jobs to skip.
       schema:
         type: integer

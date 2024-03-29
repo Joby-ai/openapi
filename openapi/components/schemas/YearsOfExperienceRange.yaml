@@ -1,15 +1,15 @@
 title: Years of experience range
-description: |
+description: |-
   Years of experience range details.
 type: object
 properties:
   min:
     type: integer
-    description: |
+    description: |-
       Minimum years of required experience.
     example: 5
   max:
     type: integer
-    description: |
+    description: |-
       Maximum years of required experience.
     example: 8

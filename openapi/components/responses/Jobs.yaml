@@ -1,4 +1,4 @@
-description: |
+description: |-
   A list of matching jobs.
 content:
   application/json:
