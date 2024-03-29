@@ -1,4 +1,4 @@
-openapi: '3.0'
+openapi: '3.0.2'
 info:
   version: v0
   title: Joby.ai Search API
@@ -20,11 +20,15 @@ info:
 
     Build your product or tool with our data of the most up to date jobs/companies hiring on the internet.
 
+    # 🚀 Postman
+
+    Using Postman? We published our API just for you! [Check it out here](https://www.postman.com/shvix/workspace/joby-ai/api/5c7d84d4-3fc5-4e79-bf33-9ba529806fbe).
+
     # 💌 Contact us
 
     If you are interested in our API, please fill out [this short questionnaire](https://docs.google.com/forms/d/e/1FAIpQLScKJk7VrPv0TVPlOocXvpfxr1GIxifORhSWmj3jeTdqT6RbQQ/viewform) or contact us at [hello@joby.ai](mailto:hello@joby.ai) and we'll be in touch.
 servers:
-  - url: https://www.joby.ai/api/v0
+  - url: https://isjquipyl4.execute-api.us-east-1.amazonaws.com/beta
 security:
   - ApiKey: []
 paths:
