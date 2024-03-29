@@ -7,7 +7,7 @@ get:
     - name: and
       in: query
       description: |-
-        Words or phrases, all of which must appear in the job description or title.
+        Words and phrases, all of which must appear in the job description or title.
       schema:
         type: array
         items:
@@ -18,7 +18,7 @@ get:
     - name: or
       in: query
       description: |-
-        Words or phrases, at least one of which must appear in the job description or title.
+        Words and phrases, at least one of which must appear in the job description or title.
       schema:
         type: array
         items:
@@ -29,7 +29,7 @@ get:
     - name: not
       in: query
       description: |-
-        Words or phrases, none of which must appear in the job description or title.
+        Words and phrases, none of which must appear in the job description or title.
       schema:
         type: array
         items:
@@ -40,7 +40,7 @@ get:
     - name: title
       in: query
       description: |-
-        Words or phrases, at least one of which must appear in the job title.
+        Words and phrases, at least one of which must appear in the job title.
       schema:
         type: array
         items:
@@ -62,7 +62,7 @@ get:
     - name: location
       in: query
       description: |-
-        Words or phrases, at least one of which must appear in the job location.
+        Words and phrases, at least one of which must appear in the job location.
       schema:
         type: array
         items:
