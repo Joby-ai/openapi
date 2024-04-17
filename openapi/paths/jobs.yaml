@@ -161,3 +161,10 @@ get:
       $ref: ../components/responses/TooManyRequests.yaml
     500:
       $ref: ../components/responses/InternalServerError.yaml
+  x-codeSamples:
+    - lang: JavaScript
+      source:
+        $ref: '../code_samples/JavaScript/jobs/get.js'
+    - lang: Python
+      source:
+        $ref: '../code_samples/Python/jobs/get.py'
