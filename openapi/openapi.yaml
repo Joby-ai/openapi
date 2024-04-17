@@ -28,6 +28,17 @@ info:
     # 📜 Authentication
     All API requests require authentication using an API key. Include your API key in the `X-API-KEY` header of each request.
 
+    ## Example Request
+    ```bash
+    curl -X GET 'https://isjquipyl4.execute-api.us-east-1.amazonaws.com/beta/jobs?and=python&location=new%20york&salaryFrom=80000&limit=5' \
+      -H 'X-API-KEY: your_api_key_here'
+    ```
+
+    # 🤝 Support
+    If you have any questions, issues, or feature requests, please email us at [hello@joby.ai](mailto:hello@joby.ai). We are here to help you succeed with the Joby.ai API.
+
+    Happy job searching! 🚀
+
 servers:
   - url: https://isjquipyl4.execute-api.us-east-1.amazonaws.com/beta
 
