@@ -11,11 +11,11 @@ info:
     url: https://opensource.org/licenses/MIT
   x-logo:
     url: static/logo.svg
-    description: |
+  description: |
     An API for searching Joby.ai's entire jobs and companies database.
 
     # 💡 About
-    Joby.ai scans company career pages directly to compile the most up-to-date database of jobs and companies hiring on the internet. We then leverage LLMs to build a powerful search engine that uncovers hidden jobs and filters out expired roles from all over the world. Our mission is to build the last job search engine you'll ever use - every job, every company, actually hiring now on the internet. 
+    Joby.ai scans company career pages directly to compile the most up-to-date database of jobs and companies hiring on the internet. We then leverage LLMs to build a powerful search engine that uncovers hidden jobs and filters out expired roles from all over the world. Our mission is to build the last job search engine you'll ever use - every job, every company, actually hiring now on the internet.
 
     Build your product or tool with our data of the most up-to-date jobs and companies hiring on the internet.
 
@@ -30,11 +30,14 @@ info:
 
 servers:
   - url: https://isjquipyl4.execute-api.us-east-1.amazonaws.com/beta
+
 security:
   - ApiKey: []
+
 paths:
   /jobs:
     $ref: paths/jobs.yaml
+
 components:
   securitySchemes:
     ApiKey:
