@@ -11,22 +11,33 @@ info:
     url: https://opensource.org/licenses/MIT
   x-logo:
     url: static/logo.svg
-  description: |-
-    An API for searching jobs in the Joby's database.
+    description: |
+    An API for searching Joby.ai's entire jobs and companies database.
 
     # 💡 About
+    Joby.ai scans company career pages directly to compile the most up-to-date database of jobs and companies hiring on the internet. We then leverage LLMs to build a powerful search engine that uncovers hidden jobs and filters out expired roles from all over the world. Our mission is to build the last job search engine you'll ever use - every job, every company, actually hiring now on the internet. 
 
-    Joby’s goal is to be the best job search engine on the planet, it scrapes the entire internet for every job on the internet and aggregates it in one place for the convenience of the job seeker.
+    Build your product or tool with our data of the most up-to-date jobs and companies hiring on the internet.
 
-    Build your product or tool with our data of the most up to date jobs/companies hiring on the internet.
+    # 🚀 Postman Collection
+    We've published a Postman Collection to make it easy to explore and test our API. You can find it [here](https://www.postman.com/shvix/workspace/joby-ai/api/5c7d84d4-3fc5-4e79-bf33-9ba529806fbe).
 
-    # 🚀 Postman
+    # 💌 Contact Us
+    If you're interested in using our API, please fill out this short [questionnaire](https://docs.google.com/forms/d/e/1FAIpQLScKJk7VrPv0TVPlOocXvpfxr1GIxifORhSWmj3jeTdqT6RbQQ/viewform) or contact us at [hello@joby.ai](mailto:hello@joby.ai). We'll be in touch to discuss your use case and provide an API key.
 
-    Using Postman? We published our API just for you! [Check it out here](https://www.postman.com/shvix/workspace/joby-ai/api/5c7d84d4-3fc5-4e79-bf33-9ba529806fbe).
+    # 📜 Authentication
+    All API requests require authentication using an API key. Include your API key in the `X-API-KEY` header of each request.
 
-    # 💌 Contact us
+    ```
+    X-API-KEY: your_api_key_here
+    ```
 
-    If you are interested in our API, please fill out [this short questionnaire](https://docs.google.com/forms/d/e/1FAIpQLScKJk7VrPv0TVPlOocXvpfxr1GIxifORhSWmj3jeTdqT6RbQQ/viewform) or contact us at [hello@joby.ai](mailto:hello@joby.ai) and we'll be in touch.
+    ## Example Request
+    ```bash
+    curl -X GET 'https://api.joby.ai/v0/search?and=python&location=new%20york&salaryFrom=80000&limit=5' \
+      -H 'X-API-KEY: your_api_key_here'
+    ```
+
 servers:
   - url: https://isjquipyl4.execute-api.us-east-1.amazonaws.com/beta
 security:
